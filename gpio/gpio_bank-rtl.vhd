@@ -10,7 +10,7 @@ architecture RTL of GPIO_BANK is
 begin
 
     -- output signal assignments
-    PIN_GEN : for I in G_NUM_PINS - 1 downto 0 generate
+    GEN_PINS : for I in G_NUM_PINS - 1 downto 0 generate
         IO_GPIO_PINS(I)   <= I_GPIO_OUT_DATA(I) when I_GPIO_DIR(I) = '1' else 'Z';
     end generate;
         

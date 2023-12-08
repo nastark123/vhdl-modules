@@ -20,7 +20,7 @@ entity GPIO is
         I_WR_DATA : in  std_logic_vector(G_DATA_SIZE - 1 downto 0);
         I_WR_EN : in  std_logic;
         O_RD_DATA : out std_logic_vector(G_DATA_SIZE - 1 downto 0);
-        O_RD_VALID : out std_logic_vector(G_DATA_SIZE - 1 downto 0);
+        O_RD_VALID : out std_logic;
 
         IO_GPIO_PINS : inout gpio_pins_t(0 to G_NUM_BANKS - 1)(G_BANK_SIZE - 1 downto 0)
     );

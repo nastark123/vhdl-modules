@@ -15,7 +15,10 @@ gpio_lib : gpio/*.vhd
 	$(ANALYZE_CMD) $(ANALYZE_FLAGS) --work=$(GPIO_LIB) --workdir=$(BUILD_DIR)/$(LIB_DIR)/$(GPIO_LIB) gpio/gpio_pkg.vhd
 	$(ANALYZE_CMD) $(ANALYZE_FLAGS) --work=$(GPIO_LIB) --workdir=$(BUILD_DIR)/$(LIB_DIR)/$(GPIO_LIB) gpio/gpio_bank.vhd
 	$(ANALYZE_CMD) $(ANALYZE_FLAGS) --work=$(GPIO_LIB) --workdir=$(BUILD_DIR)/$(LIB_DIR)/$(GPIO_LIB) gpio/gpio_bank-rtl.vhd
+	$(ANALYZE_CMD) $(ANALYZE_FLAGS) --work=$(GPIO_LIB) --workdir=$(BUILD_DIR)/$(LIB_DIR)/$(GPIO_LIB) gpio/gpio_bank_regs.vhd
+	$(ANALYZE_CMD) $(ANALYZE_FLAGS) --work=$(GPIO_LIB) --workdir=$(BUILD_DIR)/$(LIB_DIR)/$(GPIO_LIB) gpio/gpio_bank_regs-rtl.vhd
 	$(ANALYZE_CMD) $(ANALYZE_FLAGS) --work=$(GPIO_LIB) --workdir=$(BUILD_DIR)/$(LIB_DIR)/$(GPIO_LIB) gpio/gpio.vhd
+	$(ANALYZE_CMD) $(ANALYZE_FLAGS) --work=$(GPIO_LIB) --workdir=$(BUILD_DIR)/$(LIB_DIR)/$(GPIO_LIB) gpio/gpio-rtl.vhd
 
 clean : 
 	rm -rf $(BUILD_DIR)
